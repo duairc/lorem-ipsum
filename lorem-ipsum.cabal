@@ -1,0 +1,29 @@
+name:           lorem-ipsum
+version:        0.1
+synopsis:       QuickCheck functions for generating Lorem Ipsum filler text
+license:        BSD3
+license-file:   LICENSE
+author:         Shane O'Brien
+maintainer:     shane@duairc.com
+stability:      Experimental
+category:       Control
+cabal-version:  >= 1.4
+homepage:       https://github.com/duairc/lorem-ipsum
+bug-reports:    https://github.com/duairc/lorem-ipsum/issues
+build-type:     Simple
+
+Library
+  hs-source-dirs:
+    src
+
+  exposed-modules:
+    Test.QuickCheck.LoremIpsum
+
+  build-depends:
+    base,
+    QuickCheck,
+    text,
+    vector
+
+  ghc-options:
+    -Wall
