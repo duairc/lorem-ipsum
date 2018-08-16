@@ -20,7 +20,7 @@ Library
     Test.QuickCheck.LoremIpsum
 
   build-depends:
-    base,
+    base < 5,
     QuickCheck,
     text,
     vector
