@@ -75,8 +75,11 @@ sentence = do
     nwords <- choose (5, 22)
     ncommas <- choose (0, 2)
     ws <- sequence $ replicate nwords word
-    (first : rest) <- insertCommas ws ncommas
-    pure $ mconcat (intersperse " " (T.toTitle first : rest)) <> "."
+    ws' <- insertCommas ws ncommas
+    let ws'' = case ws' of
+         [] -> []
+         first : rest -> T.toTitle first : rest
+    pure $ mconcat (intersperse " " ws'') <> "."
 
 
 ------------------------------------------------------------------------------
