@@ -72,8 +72,8 @@ insertCommas ws = go ws
 ------------------------------------------------------------------------------
 sentence :: Gen Text
 sentence = do
-    nwords <- choose (5, 22)
-    ncommas <- choose (0, 2)
+    nwords <- choose (5, 12)
+    ncommas <- choose (0, 1)
     ws <- sequence $ replicate nwords word
     ws' <- insertCommas ws ncommas
     let ws'' = case ws' of
