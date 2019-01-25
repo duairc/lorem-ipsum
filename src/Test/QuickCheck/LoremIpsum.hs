@@ -769,6 +769,7 @@ words = V.fromList
     , "voluptatibus" , "voluptatis" , "voluptatum" , "volvere" , "vos"
     , "vox" , "vulnera" , "vult" , "vultu"
     ]
+{-# NOINLINE words #-}
 
 
 ------------------------------------------------------------------------------
